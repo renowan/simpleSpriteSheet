@@ -5,10 +5,10 @@ Spritesheet work at Javascript. This is simple.
 
 How to use  
 ------
-### Create a instance ###  
+### Create a instance  
 `` var sss = new SimpleSpriteSheet; ``  
 
-### Initialize ###  
+### Initialize  
     sss.init({  
         speed 		: 160,
         divWidth 	: 120,
