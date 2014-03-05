@@ -1,0 +1,66 @@
+
+body {
+    margin: 0;
+}
+
+#cardBox {
+	margin-top: 30px;
+}
+
+#cardBox ul {
+}
+
+#cardBox li {
+    float: left;
+    margin-left: 15px;
+}
+
+.sprite-sheet {
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.highlight , .control{
+	width: 660px;
+	margin-left: 40px;
+	margin-top: 30px;
+}
+
+#btn_on,#btn_off{
+	width: 90px;
+}
+
+/*
+#img_1 {
+    background-image: url("img/test_1.jpg");
+}
+
+#img_2 {
+    background-image: url("img/test_2.jpg");
+}
+
+#img_3 {
+    background-image: url("img/test_3.jpg");
+}
+
+#img_4 {
+    background-image: url("img/test_4.jpg");
+}
+
+#img_5 {
+    background-image: url("img/test_5.jpg");
+} */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */

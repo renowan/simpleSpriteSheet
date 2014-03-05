@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple SpriteSheet Demo</title>
+	<link href="index.css" rel="stylesheet">
+	<link href="bootstrap.css" rel="stylesheet">
+</head>
+<body>
+	
+<div id="cardBox">
+	<ul class="clearfix">
+		<li class="sprite-sheet" id="img_1"></li>
+		<li class="sprite-sheet" id="img_2"></li>
+		<li class="sprite-sheet" id="img_3"></li>
+		<li class="sprite-sheet" id="img_4"></li>
+		<li class="sprite-sheet" id="img_5"></li>
+	</ul>
+</div>
+
+<div class="highlight">	
+	<div id="btn_on" class="btn">再開</div>
+	<div id="btn_off" class="btn">停止</div>
+</div>
+
+<div class="highlight">
+	<pre>
+	<code class="javascript">
+	// 実装
+
+	// 初期化の各オプション。各値なしだとデフォルト値が適用される
+	// speed : コマ送りの速度（フレームレート）
+	// divWidth : スプライトシートコマの横幅
+	// divHeight : スプライトシートコマの高さ
+	// xValue : 横方向のコマ枚数
+	// yValue : 縦方向のコマ枚数
+	// frameValue : 全部何コマあるか
+
+	var sss = new SimpleSpriteSheet;</code>
+
+	/*
+	* 動かしたいスプライトシート分、addItemする
+	* @param {String} DivのID
+	* @param {String} 画像のパス
+	*/
+	sss.init({
+		speed 		: 160,
+		divWidth 	: 120,
+		divHeight 	: 370,
+		xValue 		: 10,
+		yValue 		: 3
+	});
+
+	// 最大5個まで追加できる
+	sss.addItem("img_1" , "img/sample.jpg");
+	sss.addItem("img_2" , "img/test_1.jpg");
+	sss.addItem("img_3" , "img/test_5.jpg");
+	sss.addItem("img_4" , "img/test_4.jpg");
+	sss.addItem("img_5" , "img/test_5.jpg");
+
+	// start SpriteSheet
+	sss.play();
+
+	// stop SpriteSheet
+	sss.stop();
+	</code>
+	</pre>
+</div>
+
+
+<!-- ライブラリ自体は$を使ってないので必須ではない、サンプル部分のみ使用 -->
+<script src="jq.mobi.js"></script>
+<script src="../src/simple-sprite-sheet.js"></script>
+
+
+<script>
+
+	// 実装
+	$(document).ready(function(){
+		var sss1 = new SimpleSpriteSheet;
+		var sss2 = new SimpleSpriteSheet;
+
+		// 初期化の各オプション。各値なしだとデフォルト値が適用される
+		// speed 		: 100;		// コマ送りの速度（フレームレート）
+		// divWidth 	: 120;		// スプライトシートコマの横幅
+		// divHeight 	: 120;		// スプライトシートコマの高さ
+		// xValue 		: 10;		// 横方向のコマ枚数
+		// yValue 		: 3;		// 縦方向のコマ枚数
+		// frameValue	: 0;		// 全部何コマあるか
+
+		sss1.init({
+			speed 		: 160,
+			divWidth 	: 120,
+			divHeight 	: 120,
+			xValue 		: 10,
+			yValue 		: 3
+		});
+
+		sss2.init({
+			speed 		: 220,
+			divWidth 	: 120,
+			divHeight 	: 120,
+			xValue 		: 5,
+			yValue 		: 3
+		});
+
+		/*
+		* 動かしたいスプライトシート分、addItemする
+		* @param {String} DivのID
+		* @param {String} 画像のパス
+		*/
+		sss1.addItem( "img_1" , "img/sample.jpg" );
+		sss2.addItem( "img_2" , "img/sample.jpg" );
+		sss1.play();
+		sss2.play();
+
+		$("#btn_on").bind("click",function(e){
+			sss1.play();
+			sss2.play();
+		});
+
+		$("#btn_off").bind("click",function(e){
+			sss1.stop();
+			sss2.stop();
+		});
+
+	});
+</script>
+
+
+</body>
+</html>
