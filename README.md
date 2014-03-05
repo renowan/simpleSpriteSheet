@@ -19,3 +19,5 @@ How to use
     
     sss.play();
     // sss.stop();
+
+Demo: http://gallery.renowan.com/archive/simple-sprite-sheet/sample/index.html
