@@ -17,6 +17,8 @@ How to use
         yValue 		: 3,
     });
     
+    sss.addItem("@dom_id" , "@imgPath");
+    
     sss.play();
     // sss.stop();
 
